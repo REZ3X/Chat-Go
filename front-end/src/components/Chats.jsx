@@ -24,7 +24,7 @@ const Chats = ({ messages, theme }) => {
         padding: '10px',
         margin: '10px',
         borderRadius: '8px',
-        backgroundColor: theme === 'dark' ? '#697565' : '#F5F5F5',
+        backgroundColor: theme === 'dark' ? '#B2B2B2' : '#F5F5F5',
       }}
     >
       <TransitionGroup>
@@ -60,10 +60,10 @@ const Chats = ({ messages, theme }) => {
                   maxWidth: '60%',
                   padding: '10px',
                   borderRadius: '10px',
-                  backgroundColor: chat.role === 'user' ? '#009ff9' : '#FFFFFF',
-                  color: chat.role === 'user' ? '#FFFFFF' : '#000',
+                  backgroundColor: chat.role === 'user' ? (theme === 'dark' ? '#3C4048' : '#009ff9') : (theme === 'dark' ? '#605353' : '#FFFFFF'),
+                  color: chat.role === 'user' ? '#FFFFFF' : (theme === 'dark' ? '#FFFFFF' : '#000'),
                   wordWrap: 'break-word',
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Add shadow to the chat bubble
+                  boxShadow: theme === 'dark' ? '0 4px 8px rgba(0, 0, 0, 0.3)' : '0 4px 8px rgba(0, 0, 0, 0.1)', // Adjust shadow based on theme
                 }}
               >
                 <Typography variant="body1" sx={{ fontFamily: 'Inter, sans-serif', fontSize: '14px' }}>

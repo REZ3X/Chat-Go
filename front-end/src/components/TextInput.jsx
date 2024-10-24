@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextInput = ({ message, setMessage, addMessage, theme, onFocus }) => {
+const TextInput = ({ message, setMessage, addMessage, onFocus }) => {
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
@@ -20,7 +20,7 @@ const TextInput = ({ message, setMessage, addMessage, theme, onFocus }) => {
       onChange={handleChange}
       onKeyPress={handleKeyPress}
       onFocus={onFocus}
-      className={`w-full p-3 rounded-lg ${theme === 'dark' ? 'bg-[#3C3D37] text-[#e9effb] placeholder-[#e9effb]' : 'bg-[#F4EFEF] text-black placeholder-[#608bd8]'} focus:outline-none focus:border-none`}
+      className="w-full p-3 rounded-lg bg-[#F4EFEF] text-black placeholder-[#608bd8] focus:outline-none dark:bg-[#ab9f9f] dark:text-[#e9effb] dark:placeholder-[#e9effb]"
     />
   );
 };
