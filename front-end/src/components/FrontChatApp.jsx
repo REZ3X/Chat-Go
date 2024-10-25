@@ -35,7 +35,10 @@ const FrontChatApp = () => {
   };
 
   return (
-    <div className={`relative flex flex-col ${isExpanded ? "expand-animation" : "initial-position"} border border-gray-300 rounded-xl ${theme === "dark" ? "dark bg-[#B2B2B2]" : "bg-[#F5F5F5]"} transition-all duration-500 ease-in-out`}>
+    <div className={`relative flex flex-col ${isExpanded ? "expand-animation" : "initial-position"} border border-gray-300 rounded-xl ${theme === "dark" ? "dark bg-[#B2B2B2]" : "bg-[#F5F5F5]"} transition-all duration-700 ease-in-out`}>
+      <div className={`absolute bottom-0 left-0 right-0 z-10 rounded-b-xl ${theme === "dark" ? "bg-[#B2B2B2] text-white" : "bg-[#F5F5F5] text-black"}`}>
+        <BottomContainer addMessage={addMessage} theme={theme} onFocus={handleExpand} />
+      </div>
       {isExpanded && (
         <>
           <header className={`absolute top-0 left-0 right-0 z-10 rounded-xl ${theme === "dark" ? "bg-[#ab9f9f] text-white" : "bg-white text-black"}`}>
@@ -46,9 +49,6 @@ const FrontChatApp = () => {
           </main>
         </>
       )}
-      <div className={`absolute bottom-0 left-0 right-0 z-10 rounded-b-xl ${theme === "dark" ? "bg-[#B2B2B2] text-white" : "bg-[#F5F5F5] text-black"}`}>
-        <BottomContainer addMessage={addMessage} theme={theme} onFocus={handleExpand} />
-      </div>
     </div>
   );
 };

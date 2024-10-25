@@ -4,13 +4,11 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Chats = ({ messages, theme }) => {
   const chatContainerRef = useRef(null);
+  const dummyRef = useRef(null);
 
   useEffect(() => {
-    if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTo({
-        top: chatContainerRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
+    if (dummyRef.current) {
+      dummyRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
 
@@ -19,7 +17,7 @@ const Chats = ({ messages, theme }) => {
       ref={chatContainerRef}
       className="chat-container" // Add this class for custom scrollbar styles
       sx={{
-        height: '400px',
+        height: '650px',
         overflowY: 'auto',
         padding: '10px',
         margin: '10px',
@@ -85,6 +83,7 @@ const Chats = ({ messages, theme }) => {
             </Box>
           </CSSTransition>
         ))}
+        <div ref={dummyRef} />
       </TransitionGroup>
     </Box>
   );

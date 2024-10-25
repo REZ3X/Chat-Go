@@ -1,35 +1,59 @@
 const ChatData = () => [
     {
         role: "user",
-        message: "Hello",
+        message: "Halo..",
     },
     {
         role: "bot",
-        message: "Hi, how can I help you today?",
+        message: "Ya, ada yang bisa saya bantu?",
     },
     {
         role: "user",
-        message: "I need help with my account",
+        message: "Saya ingin merental mobil.",
     },
     {
         role: "bot",
-        message: "Sure, what do you need help with?",
+        message: "Area mana yang ingin Anda tuju?",
     },
     {
         role: "user",
-        message: "I need to reset my password",
+        message: "Jakarta Selatan.",
     },
     {
         role: "bot",
-        message: "I can help you with that. Please enter your email address",
+        message: "Ingin dengan supir atau tanpa supir?",
     },
     {
         role: "user",
-        message: "[email protected]",
+        message: "Tanpa supir.",
     },
     {
         role: "bot",
-        message: "I have sent you an email with instructions to reset your password",
+        message: "Kapan Anda membutuhkan mobil tersebut?",
+    },
+    {
+        role: "user",
+        message: "Besok pagi.",
+    },
+    {
+        role: "bot",
+        message: "Jam berapa?",
+    },
+    {
+        role: "user",
+        message: "Jam 8 pagi.",
+    },
+    {
+        role: "bot",
+        message: "Berapa lama Anda akan meminjam mobil tersebut?",
+    },
+    {
+        role: "user",
+        message: "1 hari.",
+    },
+    {
+        role: "bot",
+        message: "Baik, saya menemukan beberapa mobil yang tersedia. Berikut adalah daftarnya:\n1. Toyota Avanza 2019\n2. Honda Jazz 2020\n3. Suzuki Ertiga 2021",
     },
 ];
 

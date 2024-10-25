@@ -55,10 +55,11 @@ main {
 }
 
 .initial-position {
-  width: 320px;
+  width: 600px; /* Increased initial width */
   height: 80px;
   margin: 20px auto;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out; /* Smoother transition */
+  position: relative;
 }
 
 .expand-animation {
@@ -66,14 +67,15 @@ main {
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  transition: all 0.5s ease-in-out;
-  animation: expand 0.5s ease-in-out forwards;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.7s ease-in-out; /* Smoother transition */
+  animation: expand 0.7s ease-in-out forwards; /* Smoother animation */
 }
 
 @keyframes expand {
   0% {
-    width: 320px;
+    width: 400px; /* Increased initial width */
     height: 80px;
     margin: 20px auto;
   }
@@ -81,6 +83,7 @@ main {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
