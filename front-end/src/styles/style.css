@@ -58,6 +58,7 @@ main {
   width: 600px; /* Increased initial width */
   height: 80px;
   margin: 20px auto;
+  margin-top: 150px;
   transition: all 0.7s ease-in-out; /* Smoother transition */
   position: relative;
 }
@@ -73,11 +74,23 @@ main {
   animation: expand 0.7s ease-in-out forwards; /* Smoother animation */
 }
 
+.minimize-animation {
+  width: 600px; /* Initial width */
+  height: 80px;
+  margin-top: 150px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.7s ease-in-out; /* Smoother transition */
+  animation: minimize 0.7s ease-in-out forwards; /* Smoother animation */
+}
+
 @keyframes expand {
   0% {
-    width: 400px; /* Increased initial width */
+    width: 600px; /* Initial width */
     height: 80px;
-    margin: 20px auto;
+    margin-top: 150px;
   }
   100% {
     width: 100%;
@@ -85,5 +98,22 @@ main {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 0;
+  }
+}
+
+@keyframes minimize {
+  0% {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+  }
+  100% {
+    width: 600px; /* Initial width */
+    height: 80px;
+    margin-top: 150px;
   }
 }

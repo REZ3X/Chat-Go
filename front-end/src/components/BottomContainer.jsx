@@ -3,7 +3,7 @@ import TextInput from "./TextInput";
 import UploadFileButton from "./UploadFileButton";
 import SendChatButton from "./SendChatButton";
 
-function BottomContainer({ addMessage, theme, onFocus }) {
+function BottomContainer({ addMessage, theme, onFocus, isExpanded }) {
   const [message, setMessage] = useState('');
 
   const clearMessage = () => {
